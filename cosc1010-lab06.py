@@ -1,8 +1,8 @@
-# Your Name Here
+# Colter Makowski
 # UWYO COSC 1010
-# Submission Date
+# Submission Date 10/20/24
 # Lab 06
-# Lab Section: 
+# Lab Section: 15
 # Sources, people worked with, help given to: 
 # your
 # comments
