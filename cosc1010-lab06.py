@@ -3,7 +3,7 @@
 # Submission Date 10/20/24
 # Lab 06
 # Lab Section: 15
-# Sources, people worked with, help given to: 
+# Sources, people worked with, help given to: Braxton helped me
 # your
 # comments
 # here
@@ -63,7 +63,14 @@ zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 """
 random_string = random_string.replace("\n","") #remove all newline characters
 print(len(random_string)) # Print out the size for reference 
-
+Alphabet = {}
+for character in random_string:
+    if character in Alphabet:
+        Alphabet[character] += 1
+    else:
+        Alphabet[character] = 1
+Alphabet_sorted=dict(sorted(Alphabet.items()))
+print (Alphabet_sorted)
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
 # Output each letter and its corresponding occurrence in alphabetical order
@@ -84,15 +91,36 @@ print(len(random_string)) # Print out the size for reference
 # Output: each letter and its corresponding occurrence in alphabetical order
 
 print("*"*75)
-# Output which letter occurred the most 
+# Output which letter occurred the most
 
-most_occurred = ""
-least_occurred = ""
 
+
+most_occurred = max(Alphabet_sorted, key=Alphabet_sorted.get)
+least_occurred = min(Alphabet_sorted, key=Alphabet_sorted.get)
+'''
+for k, v in Alphabet_sorted.items():
+    if v > max_value:
+        max_value = v
+        max_key = k
+most_occurred = max_key
+
+'''
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
+'''
 # Output which letter occurred the least 
-print(f"The letter that occurred the most is {least_occurred}")
+min_value = max_value
+for k, v in Alphabet_sorted.items():
+    if v < max_value:
+        min_value = v
+        min_key = k
+least_occurred = min_key
+'''
+print(f"The letter that occurred the least is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
+character_percent = {}
+for k, v in Alphabet_sorted.items():
+    character_percent[k]=(v/2500)*100
+print (character_percent)
