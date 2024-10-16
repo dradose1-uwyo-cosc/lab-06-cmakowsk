@@ -78,8 +78,6 @@ print(len(random_string)) # Print out the size for reference
 # That is to say, this is a great use of dictionaries
     # You will  need to add the letter to the dictionary on first occurrence 
     # Then increment its corresponding count 
-
-
 #Load all the elements into a dictionary
 #Will need to first declare a dictionary 
 
